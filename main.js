@@ -1,3 +1,6 @@
+/* Initial color is black pen */
+let color = 'black'
+
 /* Initialise board */
 
 function populateBoard(size) {
@@ -31,7 +34,7 @@ function colorSquare() {
 }
 
 function changeColor(choice) {
-    let color = choice;
+    color = choice;
 }
 
 
