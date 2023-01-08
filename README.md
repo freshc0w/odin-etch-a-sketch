@@ -9,3 +9,5 @@ The following skills will be demonstrated:
 - Applying logic to enhance user interaction.
 
 
+Additional skills learnt while doing this project:
+- CSS grid.
