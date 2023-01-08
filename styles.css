@@ -56,11 +56,52 @@ button:hover {
     cursor:pointer;
 }
 
-button:active {
-    background-color: white; 
-}
-
 .blackButton {
     background-color: black;
     color: white;
+}
+.blackButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.erasorButton {
+    background-color: rgb(255 255 255);
+    color: rgb(0 0 0);
+}
+
+.erasorButton:hover {
+    background-color: rgb(255 255 255);
+    color: rgb(220 220 220);
+}
+
+.grayButton {
+    background-color: rgba(128, 128, 128, 0.411);
+    color: black; 
+}
+.grayButton:hover {
+    background-color: rgb(95, 95, 95);
+    color: rgb(255 255 255); 
+}
+
+.randomButton {
+    /* Can use linearGradient to create a 'rainbow' effect for the 
+    color of the backgorund. Need to use a turn argument first tho,
+    with the following arguments of three different colors; */
+    background: linear-gradient(0.25turn, #f65cfc, #ebf8e1, #583cf6);
+}
+.randomButton:hover {
+    background: linear-gradient(0.2turn, #20ff02, #ebf8e1, #aecc03)
+}
+
+input {
+    width: 50px;
+}
+
+.mode {
+    margin-bottom: 5px;
+}
+
+.error {
+    display: none;
 }
