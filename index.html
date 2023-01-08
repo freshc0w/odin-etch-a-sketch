@@ -15,7 +15,7 @@
             <div class="board"></div>
             <div class="buttons">
                 <button class="blackButton" onclick="changeColor('black')">Black</button>
-                <button class="whiteButton" onclick="changeColor('white')">Erasor</button>
+                <button class="erasorButton" onclick="changeColor('white')">Erasor</button>
                 <button class="grayButton" onclick="changeColor('gray')">Gray</button>
                 <button class="randomButton" onclick="changeColor('random')">Random</button>
                 <button class="resetButton" onclick="resetBoard()">Reset</button>
@@ -26,6 +26,9 @@
                 value="16" 
                 onchange="setSize(this.value)">
                 <button>Set Size</button>
+            </div>
+            <div class="error">
+                Input must be between 2 and 100.
             </div>
         </div>
     </div>
