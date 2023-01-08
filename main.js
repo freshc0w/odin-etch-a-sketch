@@ -51,8 +51,15 @@ function resetBoard() {
     squares.forEach((div) => div.style.backgroundColor = 'white');
 };
 
-document.querySelector('body').addEventListener('click', () => {
-    click = !click // Detects click and will draw depending on the current state of click.
-})
+document.querySelector('body').addEventListener('click', (e) => {
+    if(e.target.tagName != 'BUTTON') { // Won't switch coloring mode if click on button
+        click = !click // Detects click and will draw depending on the current state of click.
+    if (click) {
+        document.querySelector('.mode').textContent = "Mode: Coloring";
+    } else {
+        document.querySelector('.mode').textContent = "Mode : Not Coloring";
+    }
+    }
+});
 
  
