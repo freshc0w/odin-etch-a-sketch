@@ -30,7 +30,11 @@ function setSize(input) {
 populateBoard(16);
 
 function colorSquare() {
+    if (color === 'random') { //Provide random color to pen
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)` 
+    } else {
     this.style.backgroundColor = color;
+    };
 }
 
 function changeColor(choice) {
