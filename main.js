@@ -1,5 +1,7 @@
 /* Initial color is black pen */
-let color = 'black'
+let color = 'black';
+
+let click = false;
 
 /* Initialise board */
 
@@ -30,22 +32,27 @@ function setSize(input) {
 populateBoard(16);
 
 function colorSquare() {
-    if (color === 'random') { //Provide random color to pen
-        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)` 
-    } else {
-    this.style.backgroundColor = color;
+    if (click) { // only color if user has clicked
+        if (color === 'random') { //Provide random color to pen
+            this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)` 
+        } else {
+        this.style.backgroundColor = color;
+        };
     };
-}
+};
 
 function changeColor(choice) {
     color = choice;
-}
+};
 
 function resetBoard() {
     let board = document.querySelector('.board');
     let squares = board.querySelectorAll('div');
     squares.forEach((div) => div.style.backgroundColor = 'white');
-}
+};
 
+document.querySelector('body').addEventListener('click', () => {
+    click = !click // Detects click and will draw depending on the current state of click.
+})
 
  
