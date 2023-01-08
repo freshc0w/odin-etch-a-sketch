@@ -10,10 +10,8 @@ function populateBoard(size) {
     let amount = size * size
     for (let i = 0; i < amount; i++) {
         let square = document.createElement('div');
-        square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = "black";
-        });
-        square.style.backgroundColor = 'blue';
+        square.addEventListener('mouseover', colorSquare); // Mouseover effect
+        square.style.backgroundColor = 'white';
         board.insertAdjacentElement('beforeend', square);
     };
 };
@@ -27,5 +25,14 @@ function setSize(input) {
 };
 
 populateBoard(16);
+
+function colorSquare() {
+    this.style.backgroundColor = color;
+}
+
+function changeColor(choice) {
+    let color = choice;
+}
+
 
  
