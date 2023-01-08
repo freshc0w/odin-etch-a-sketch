@@ -1,9 +1,10 @@
 /* Initial color is black pen */
 let color = 'black';
 
-let click = false;
+let click = true;
 
 /* Initialise board */
+populateBoard(16);
 
 function populateBoard(size) {
     let board = document.querySelector('.board');
@@ -30,7 +31,6 @@ function setSize(input) {
     } 
 };
 
-populateBoard(16);
 
 function colorSquare() {
     if (click) { // only color if user has clicked
